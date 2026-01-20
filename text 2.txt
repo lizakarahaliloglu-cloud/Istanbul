@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Стамбул 3 дня — Нюд эстетика</title>
+    <style>
+        @page { margin: 15mm; size: A4; }
+        * { margin: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Helvetica Neue', 'Arial', sans-serif; 
+            line-height: 1.6; 
+            background: #F8F6F3; /* тёплый песок */
+            color: #4A4A4A; /* тёмно-серый */
+            padding: 25px; max-width: 190mm;
+            font-size: 14px;
+        }
+        
+        /* NUDE COVER */
+        .cover { 
+            background: linear-gradient(135deg, #EDE4E0 0%, #D9D2C9 50%, #F4F1EC 100%);
+            color: #5C4033; 
+            padding: 60px 40px; 
+            border-radius: 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(212,184,164,0.3) 0%, transparent 50%);
+            border-radius: 25px;
+        }
+        .cover h1 { 
+            font-size: 36px; 
+            font-weight: 300; 
+            letter-spacing: 3px;
+            position: relative; z-index: 1;
+            margin-bottom: 15px;
+        }
+        .cover .subtitle { 
+            font-size: 16px; 
+            opacity: 0.8; 
+            letter-spacing: 1px;
+            position: relative; z-index: 1;
+        }
+        
+        /* NUDE DAYS */
+        .day { 
+            background: rgba(255,255,255,0.85); 
+            margin: 30px 0; 
+            padding: 35px; 
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            border: 1px solid rgba(237,228,224,0.5);
+            page-break-inside: avoid;
+        }
+        .day h2 { 
+            font-size: 26px; 
+            color: #8B7355; /* тёплый коричневый */
+            font-weight: 300;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #EDE4E0;
+            display: flex; align-items: center; gap: 12px;
+            letter-spacing: 1px;
+        }
+        
+        /* MINIMAL SCHEDULE */
+        .schedule { 
+            display: grid; 
+            grid-template-columns: 50px 1fr 70px; 
+            gap: 15px; 
+            margin: 30px 0;
+            background: rgba(248,246,243,0.7);
+            padding: 25px;
+            border-radius: 18px;
+            border: 1px solid #EDE4E0;
+        }
+        .time { 
+            background: linear-gradient(135deg, #D9D2C9, #EDE4E0);
+            color: #5C4033; 
+            padding: 12px 8px; 
+            border-radius: 10px; 
+            text-align: center; 
+            font-weight: 500;
+            font-size: 15px;
+            box-shadow: 0 4px 15px rgba(237,228,224,0.5);
+        }
+        .place { 
+            font-size: 16px; 
+            padding: 18px 15px; 
+            background: rgba(255,255,255,0.6);
+            border-radius: 12px;
+            border-left: 4px solid #D9D2C9;
+            font-weight: 400;
+        }
+        .transport { 
+            font-size: 13px; 
+            color: #8B7355; 
+            padding: 15px 10px; 
+            background: rgba(248,246,243,0.9);
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 400;
+        }
+        
+        /* NUDE INFO BOX */
+        .info-box { 
+            background: linear-gradient(90deg, rgba(237,228,224,0.5), rgba(217,210,201,0.4));
+            padding: 25px; 
+            border-radius: 20px; 
+            margin: 25px 0;
+            border-left: 5px solid #D9D2C9;
+            backdrop-filter: blur(10px);
+        }
+        
+        .map-placeholder { 
+            height: 200px; 
+            background: linear-gradient(135deg, #EDE4E0, #F4F1EC);
+            border-radius: 20px; 
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            color: #8B7355; 
+            font-size: 16px;
+            margin: 30px 0;
+            font-weight: 300;
+            box-shadow: 0 8px 25px rgba(237,228,224,0.6);
+            letter-spacing: 1px;
+        }
+        
+        /* SOFT FOOTER */
+        .footer { 
+            background: linear-gradient(135deg, rgba(248,246,243,0.8), rgba(244,241,236,0.9));
+            padding: 35px; 
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(237,228,224,0.7);
+        }
+        
+        @media print { 
+            body { background: white; -webkit-print-color-adjust: exact; }
+            .cover, .day, .info-box { -webkit-print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+    <!-- COVER -->
+    <div class="cover">
+        <h1>СТАМБУЛ<br><span style="font-size: 22px; font-weight: 400;">3 дня</span></h1>
+        <div class="subtitle">январь 2026 • минималистичный маршрут</div>
+    </div>
+
+    <!-- ДЕНЬ 1 -->
+    <div class="day">
+        <h2>🕌 День 1 • Султанахмет</h2>
+        <div class="info-box">
+            <strong>T1 трамвай • 8 км пешком</strong><br>
+            Бежевый мрамор и бирюзовые купола
+        </div>
+        <div class="schedule">
+            <div class="time">09:00</div>
+            <div class="place">Айя-София<br>1500 лет византийских мозаик</div>
+            <div class="transport">T1 Sultanahmet</div>
+            <div class="time">10:30</div>
+            <div class="place">Голубая мечеть<br>20 000 изразцов</div>
+            <div class="transport">5 мин пешком</div>
+            <div class="time">14:00</div>
+            <div class="place">Цистерна Базилика<br>Своды Медузы</div>
+            <div class="transport">7 мин пешком</div>
+        </div>
+        <div class="map-placeholder">T1 Sultanahmet • Maps.me офлайн</div>
+    </div>
+
+    <!-- ДЕНЬ 2 -->
+    <div class="day">
+        <h2>🛍 День 2 • Базары</h2>
+        <div class="info-box">
+            <strong>Гранд-базар → Галата</strong><br>
+            Терракотовые специи и закат с башни
+        </div>
+        <div class="schedule">
+            <div class="time">10:00</div>
+            <div class="place">Гранд-базар<br>5000 лавок</div>
+            <div class="transport">T1 Beyazıt</div>
+            <div class="time">13:00</div>
+            <div class="place">Сулеймание<br>Панорама города</div>
+            <div class="transport">T1 + фуникулёр</div>
+            <div class="time">18:00</div>
+            <div class="place">Галатская башня<br>360° Золотой Рог</div>
+            <div class="transport">M2 Karaköy</div>
+        </div>
+    </div>
+
+    <!-- ДЕНЬ 3 -->
+    <div class="day">
+        <h2>🌊 День 3 • Босфор</h2>
+        <div class="info-box">
+            <strong>Паром + Долмабахче</strong><br>
+            Дворцы на воде и цветной Балат
+        </div>
+        <div class="schedule">
+            <div class="time">10:00</div>
+            <div class="place">Круиз Босфор<br>1.5 часа</div>
+            <div class="transport">Eminönü (100 TL)</div>
+            <div class="time">12:00</div>
+            <div class="place">Долмабахче<br>Люстра 4.5 тонны</div>
+            <div class="transport">T1 Kabataş</div>
+            <div class="time">15:00</div>
+            <div class="place">Балат<br>Цветные дома</div>
+            <div class="transport">M2 Taksim</div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div style="font-size: 15px; margin-bottom: 20px;">
+            🗺️ Maps.me Стамбул (45 МБ) • Istanbulkart 150 TL
+        </div>
+        <div style="font-size: 13px; opacity: 0.8; font-style: italic;">
+            Минимализм в османских тонах
+        </div>
+    </div>
+</body>
+</html>
