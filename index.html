@@ -1,371 +1,365 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Стамбул 3 дня — Нюд эстетика</title>
-    <style>
-        @page { margin: 15mm; size: A4; }
-        * { margin: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Helvetica Neue', 'Arial', sans-serif; 
-            line-height: 1.6; 
-            background: #F8F6F3; /* тёплый песок */
-            color: #4A4A4A; /* тёмно-серый */
-            padding: 25px; max-width: 190mm;
-            font-size: 14px;
-        }
-        
-        /* NUDE COVER */
-        .cover { 
-            background: linear-gradient(135deg, #EDE4E0 0%, #D9D2C9 50%, #F4F1EC 100%);
-            color: #5C4033; 
-            padding: 60px 40px; 
-            border-radius: 25px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
-        }
-        .cover::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle at 30% 20%, rgba(212,184,164,0.3) 0%, transparent 50%);
-            border-radius: 25px;
-        }
-        .cover h1 { 
-            font-size: 36px; 
-            font-weight: 300; 
-            letter-spacing: 3px;
-            position: relative; z-index: 1;
-            margin-bottom: 15px;
-        }
-        .cover .subtitle { 
-            font-size: 16px; 
-            opacity: 0.8; 
-            letter-spacing: 1px;
-            position: relative; z-index: 1;
-        }
-        
-        /* NUDE DAYS */
-        .day { 
-            background: rgba(255,255,255,0.85); 
-            margin: 30px 0; 
-            padding: 35px; 
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-            border: 1px solid rgba(237,228,224,0.5);
-            page-break-inside: avoid;
-        }
-        .day h2 { 
-            font-size: 26px; 
-            color: #8B7355; /* тёплый коричневый */
-            font-weight: 300;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #EDE4E0;
-            display: flex; align-items: center; gap: 12px;
-            letter-spacing: 1px;
-        }
-        
-        /* MINIMAL SCHEDULE */
-        .schedule { 
-            display: grid; 
-            grid-template-columns: 50px 1fr 70px; 
-            gap: 15px; 
-            margin: 30px 0;
-            background: rgba(248,246,243,0.7);
-            padding: 25px;
-            border-radius: 18px;
-            border: 1px solid #EDE4E0;
-        }
-        .time { 
-            background: linear-gradient(135deg, #D9D2C9, #EDE4E0);
-            color: #5C4033; 
-            padding: 12px 8px; 
-            border-radius: 10px; 
-            text-align: center; 
-            font-weight: 500;
-            font-size: 15px;
-            box-shadow: 0 4px 15px rgba(237,228,224,0.5);
-        }
-        .place { 
-            font-size: 16px; 
-            padding: 18px 15px; 
-            background: rgba(255,255,255,0.6);
-            border-radius: 12px;
-            border-left: 4px solid #D9D2C9;
-            font-weight: 400;
-        }
-        .transport { 
-            font-size: 13px; 
-            color: #8B7355; 
-            padding: 15px 10px; 
-            background: rgba(248,246,243,0.9);
-            border-radius: 10px;
-            text-align: center;
-            font-weight: 400;
-        }
-        
-        /* NUDE INFO BOX */
-        .info-box { 
-            background: linear-gradient(90deg, rgba(237,228,224,0.5), rgba(217,210,201,0.4));
-            padding: 25px; 
-            border-radius: 20px; 
-            margin: 25px 0;
-            border-left: 5px solid #D9D2C9;
-            backdrop-filter: blur(10px);
-        }
-        
-        .map-placeholder { 
-            height: 200px; 
-            background: linear-gradient(135deg, #EDE4E0, #F4F1EC);
-            border-radius: 20px; 
-            display: flex; flex-direction: column;
-            align-items: center; justify-content: center;
-            color: #8B7355; 
-            font-size: 16px;
-            margin: 30px 0;
-            font-weight: 300;
-            box-shadow: 0 8px 25px rgba(237,228,224,0.6);
-            letter-spacing: 1px;
-        }
-        
-        /* SOFT FOOTER */
-        .footer { 
-            background: linear-gradient(135deg, rgba(248,246,243,0.8), rgba(244,241,236,0.9));
-            padding: 35px; 
-            border-radius: 20px;
-            text-align: center;
-            border: 1px solid rgba(237,228,224,0.7);
-        }
-        
-        @media print { 
-            body { background: white; -webkit-print-color-adjust: exact; }
-            .cover, .day, .info-box { -webkit-print-color-adjust: exact; }
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Стамбул • 3 дня — Premium Guide</title>
+
+<style>
+@page { margin: 15mm; size: A4; }
+* { box-sizing: border-box; margin: 0; }
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: #F8F6F3;
+    color: #4A4A4A;
+    line-height: 1.6;
+    padding: 30px;
+    max-width: 190mm;
+    margin: auto;
+}
+
+/* COVER */
+.cover {
+    background: linear-gradient(135deg, #EDE4E0, #D9D2C9);
+    padding: 70px 40px;
+    border-radius: 28px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.cover h1 {
+    font-size: 38px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+.cover p {
+    margin-top: 15px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #6E5B4B;
+}
+
+/* DAY BLOCK */
+.day {
+    background: rgba(255,255,255,0.9);
+    border-radius: 24px;
+    padding: 40px;
+    margin-bottom: 45px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.05);
+    page-break-inside: avoid;
+}
+.day h2 {
+    font-size: 26px;
+    font-weight: 300;
+    color: #8B7355;
+    margin-bottom: 10px;
+}
+.section-note {
+    font-size: 15px;
+    color: #8B7355;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+/* INFO */
+.info-box {
+    background: rgba(237,228,224,0.6);
+    border-left: 4px solid #D9D2C9;
+    padding: 20px;
+    border-radius: 18px;
+    margin: 30px 0;
+}
+
+/* SCHEDULE */
+.schedule {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 22px;
+}
+.time {
+    font-weight: 500;
+    color: #5C4033;
+}
+.place {
+    font-size: 15px;
+}
+.place small {
+    display: block;
+    margin-top: 6px;
+    color: #8B7355;
+    font-size: 13px;
+}
+.mosque-info {
+    font-size: 13px;
+    font-style: italic;
+    color: #6E5B4B;
+    margin-top: 4px;
+}
+.food {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 12px;
+    padding: 5px 10px;
+    background: #EDE4E0;
+    border-radius: 8px;
+    color: #5C4033;
+}
+.route {
+    font-size: 12px;
+    color: #6E5B4B;
+    margin-top: 6px;
+}
+</style>
 </head>
+
 <body>
-    <!-- COVER -->
-    <div class="cover">
-        <h1>СТАМБУЛ<br><span style="font-size: 22px; font-weight: 400;">3 дня</span></h1>
-        <div class="subtitle">январь 2026 • минималистичный маршрут</div>
-    </div>
 
-    <!-- ====== DAY 1 ====== -->
-<div class="day">
-    <h2>🕌 День 1 • Имперский Стамбул</h2>
-    <div class="section-note">Камень, купола и живая городская линия</div>
-
-    <div class="info-box">
-        <strong>Султанахмет → Каракёй → Истикляль</strong><br>
-        История, мосты и энергия современного города
-    </div>
-
-    <div class="schedule">
-        <div class="time">09:00</div>
-        <div class="place">
-            Завтрак • Seven Hills Restaurant
-            <small>Терраса с видом на Айя-Софию и Босфор</small>
-            <span class="food">kahvaltı • rooftop</span>
-        </div>
-        <div class="transport">пешком</div>
-
-        <div class="time">10:30</div>
-        <div class="place">
-            Айя-София
-            <div class="mosque-info">
-                VI век • символ Византии и Османской эпохи • грандиозный купол
-            </div>
-            <small>
-                Пространство, где ощущается масштаб империй и тишина времени.
-            </small>
-
-            <br><br>
-
-            Мечеть Султанахмет
-            <div class="mosque-info">
-                XVII век • 6 минаретов • изникские изразцы
-            </div>
-            <small>
-                Светлая, гармоничная и удивительно спокойная.
-            </small>
-        </div>
-        <div class="transport">5 мин</div>
-
-        <div class="time">12:00</div>
-        <div class="place">
-            Парк Гюльхане
-            <small>
-                Бывший сад дворца Топкапы. 
-                Тенистые аллеи, чай и редкое чувство паузы в центре города.
-            </small>
-        </div>
-        <div class="transport">10 мин</div>
-
-        <div class="time">13:00</div>
-        <div class="place">
-            Сиркеджи → Галатский мост
-            <small>
-                Район старых вокзалов и портовой жизни. 
-                Рыбаки, чайки и панорама Золотого Рога.
-            </small>
-        </div>
-        <div class="transport">пешком</div>
-
-        <div class="time">14:00</div>
-        <div class="place">
-            Кофе • Каракёй
-            <small>
-                Современный район с кофейнями, пекарнями и галереями.
-            </small>
-            <span class="food">specialty coffee</span>
-        </div>
-        <div class="transport">пешком</div>
-
-        <div class="time">15:30</div>
-        <div class="place">
-            Tünel → Истикляль
-            <small>
-                Исторический фуникулёр 1875 года и прогулка к Галатской башне.
-            </small>
-        </div>
-        <div class="transport">Tünel</div>
-
-        <div class="time">16:00</div>
-        <div class="place">
-            Истикляль и Таксим
-            <small>
-                Сердце современного Стамбула: пассажи, трамвай, уличная музыка.
-            </small>
-        </div>
-        <div class="transport">пешком</div>
-
-        <div class="time">18:00</div>
-        <div class="place">
-            Ужин • Midpoint (Istiklal)
-            <small>
-                Надёжный вариант в центре: комфортно и без суеты.
-            </small>
-            <span class="food">dinner</span>
-        </div>
-        <div class="transport">пешком</div>
-    </div>
+<!-- COVER -->
+<div class="cover">
+    <h1>СТАМБУЛ<br>3 ДНЯ</h1>
+    <p>минималистичный маршрут • premium edition<br>by Elizaveta Karahaliloğlu</p>
 </div>
 
-<!-- ====== DAY 2 ====== -->
+<!-- DAY 1 -->
 <div class="day">
-    <h2>🌿 День 2 • Азиатский Стамбул</h2>
-    <div class="section-note">Локальная жизнь без спешки</div>
+<h2>🕌 День 1 • Имперский Стамбул</h2>
+<div class="section-note">Султанахмет → Каракёй → Истикляль</div>
 
-    <div class="info-box">
-        <strong>Каракёй → Кадыкёй → Мода</strong><br>
-        Спокойный ритм и местная атмосфера
-    </div>
+<div class="schedule">
 
-    <div class="schedule">
-        <div class="time">09:00</div>
-        <div class="place">
-            Вапур Каракёй → Кадыкёй
-            <small>
-                Утренний Босфор, чай в стаканчиках и лучшие виды с воды.
-            </small>
-        </div>
-        <div class="transport">паром</div>
-
-        <div class="time">10:00</div>
-        <div class="place">
-            Завтрак • Kronotrop
-            <small>
-                Один из самых уважаемых кофе-брендов Турции.
-            </small>
-            <span class="food">coffee</span>
-        </div>
-        <div class="transport">пешком</div>
-
-        <div class="time">11:00</div>
-        <div class="place">
-            Прогулка по Moda
-            <small>
-                Зелёные улицы, кошки, море и ощущение курорта.
-            </small>
-        </div>
-        <div class="transport">пешком</div>
-
-        <div class="time">11:30</div>
-        <div class="place">
-            Poco Matcha
-            <small>
-                Японская эстетика и качественная матча.
-            </small>
-            <span class="food">matcha</span>
-        </div>
-        <div class="transport">пешком</div>
-
-        <div class="time">12:00</div>
-        <div class="place">
-            Bahariye Caddesi
-            <small>
-                Главная улица Кадыкёя: трамвай, магазины и локальный ритм.
-            </small>
-        </div>
-        <div class="transport">пешком</div>
-    </div>
+<div class="time">09:00</div>
+<div class="place">
+Seven Hills Restaurant
+<small>Завтрак с видом на Айя-Софию и Босфор</small>
+<div class="route">🚋 Трамвай T1 • остановка Sultanahmet</div>
+<span class="food">kahvaltı • rooftop</span>
 </div>
 
-<!-- ====== DAY 3 ====== -->
-<div class="day">
-    <h2>🌊 День 3 • Балат и Босфор</h2>
-    <div class="section-note">Цвет, вода и тишина</div>
-
-    <div class="info-box">
-        <strong>Балат → Ортакёй</strong><br>
-        Районы с характером и путь по воде
-    </div>
-
-    <div class="schedule">
-        <div class="time">09:00</div>
-        <div class="place">
-            Завтрак • İlters (Balat)
-            <small>
-                Простое местное кафе. 
-                Утро — лучшее время для Балата.
-            </small>
-            <span class="food">kahvaltı</span>
-        </div>
-        <div class="transport">пешком</div>
-
-        <div class="time">09:45</div>
-        <div class="place">
-            Прогулка по Балату
-            <small>
-                Цветные фасады, старые двери и следы разных культур.
-            </small>
-        </div>
-        <div class="transport">пешком</div>
-
-        <div class="time">13:10</div>
-        <div class="place">
-            Вапур Эминёню → Ортакёй
-            <small>
-                Один из самых живописных маршрутов по Босфору.
-            </small>
-        </div>
-        <div class="transport">паром</div>
-    </div>
+<div class="time">10:30</div>
+<div class="place">
+Айя-София
+<div class="mosque-info">VI век • византийское наследие</div>
+<div class="route">🚋 Трамвай T1 • остановка Sultanahmet</div>
 </div>
-    </div>
 
-    <!-- FOOTER -->
-    <div class="footer">
-        <div style="font-size: 15px; margin-bottom: 20px;">
-            🗺️ Maps.me Стамбул (45 МБ) • Istanbulkart 150 TL
-        </div>
-        <div style="font-size: 13px; opacity: 0.8; font-style: italic;">
-            Минимализм в османских тонах
-        </div>
-    </div>
+<div class="time">10:30</div>
+<div class="place">
+Мечеть Султанахмет
+<div class="mosque-info">XVII век • 6 минаретов</div>
+<div class="route">🚋 Трамвай T1 • остановка Sultanahmet</div>
+</div>
+
+<div class="time">12:00</div>
+<div class="place">
+Парк Гюльхане
+<small>Бывший сад дворца Топкапы</small>
+<div class="route">🚋 Трамвай T1 • остановка Gülhane</div>
+</div>
+
+<div class="time">13:00</div>
+<div class="place">
+Сиркеджи / Галатский мост
+<small>Золотой Рог и городская линия</small>
+<div class="route">🚋 Трамвай T1 • остановка Sirkeci</div>
+</div>
+
+<div class="time">14:00</div>
+<div class="place">
+Кофе в Каракёй
+<small>Современные кофейни и галереи</small>
+<div class="route">🚋 Трамвай T1 • остановка Karaköy</div>
+</div>
+
+<div class="time">15:30</div>
+<div class="place">
+Tünel → Истикляль
+<small>Исторический фуникулёр</small>
+<div class="route">🚇 Фуникулёр Tünel • Karaköy</div>
+</div>
+
+<div class="time">18:00</div>
+<div class="place">
+Midpoint • Istiklal
+<small>Ужин без спешки</small>
+<div class="route">🚇 Метро M2 • станция Taksim</div>
+</div>
+
+</div>
+</div>
+
+<!-- DAY 2 -->
+<div class="day">
+<h2>🌿 День 2 • Азиатский Стамбул</h2>
+<div class="section-note">Kadıköy • Moda</div>
+
+<div class="schedule">
+
+<div class="time">09:00</div>
+<div class="place">
+Паром Каракёй → Кадыкёй
+<small>Лучший способ увидеть город с воды</small>
+<div class="route">⛴ Причал Karaköy</div>
+</div>
+
+<div class="time">10:00</div>
+<div class="place">
+Kronotrop
+<small>Завтрак и хороший кофе</small>
+<div class="route">🚇 Метро M4 • Kadıköy</div>
+</div>
+
+<div class="time">11:00</div>
+<div class="place">
+Moda
+<small>Море, тишина и зелёные улицы</small>
+<div class="route">🚋 Ностальгический трамвай Moda</div>
+</div>
+
+<div class="time">11:30</div>
+<div class="place">
+Poco Matcha
+<small>Матча и японская эстетика</small>
+<div class="route">🚋 Трамвай Moda • остановка Moda</div>
+</div>
+
+<div class="time">12:00</div>
+<div class="place">
+Bahariye Caddesi
+<small>Главная улица Кадыкёя</small>
+<div class="route">🚇 Метро M4 • Kadıköy</div>
+</div>
+
+</div>
+
+<div class="info-box">Optional • эстетика Kadıköy & Moda</div>
+
+<div class="schedule">
+
+<div class="time">13:00</div>
+<div class="place">
+Walter’s Coffee Roastery
+<small>Винтажная эстетика</small>
+<div class="route">🚇 Метро M4 • Kadıköy</div>
+</div>
+
+<div class="time">14:00</div>
+<div class="place">
+Tellalzade Sokak
+<small>Антикварные лавки и текстуры</small>
+<div class="route">🚇 Метро M4 • Kadıköy</div>
+</div>
+
+<div class="time">15:00</div>
+<div class="place">
+Moda Sahili
+<small>Линия моря и мягкий свет</small>
+<div class="route">🚋 Трамвай Moda</div>
+</div>
+
+<div class="time">16:00</div>
+<div class="place">
+Moda İskelesi
+<small>Старый причал и тишина</small>
+<div class="route">🚋 Трамвай Moda • Moda</div>
+</div>
+
+<div class="time">17:00</div>
+<div class="place">
+Arada Blue City
+<small>Минимализм и десерты</small>
+<div class="route">🚋 Трамвай Moda • Moda</div>
+</div>
+
+</div>
+</div>
+
+<!-- DAY 3 -->
+<div class="day">
+<h2>🌊 День 3 • Балат и Босфор</h2>
+<div class="section-note">Balat • Ortaköy</div>
+
+<div class="schedule">
+
+<div class="time">09:00</div>
+<div class="place">
+İlters • Balat
+<small>Местный завтрак</small>
+<div class="route">🚋 Трамвай T1 • остановка Balat</div>
+</div>
+
+<div class="time">09:45</div>
+<div class="place">
+Прогулка по Балату
+<small>Цветные фасады</small>
+<div class="route">🚋 Трамвай T1 • остановка Balat</div>
+</div>
+
+</div>
+
+<div class="info-box">Optional • эстетика Балата</div>
+
+<div class="schedule">
+
+<div class="time">10:30</div>
+<div class="place">
+Kiremit Caddesi
+<small>Самая фотогеничная улица</small>
+<div class="route">🚋 Трамвай T1 • Balat</div>
+</div>
+
+<div class="time">11:15</div>
+<div class="place">
+Velvet Cafe
+<small>Винтаж и мягкий свет</small>
+<div class="route">🚋 Трамвай T1 • Balat</div>
+</div>
+
+<div class="time">12:00</div>
+<div class="place">
+Ferruh Kethüda Mosque
+<small>Тихая и камерная</small>
+<div class="route">🚋 Трамвай T1 • Balat</div>
+</div>
+
+</div>
+
+<div class="schedule">
+
+<div class="time">13:10</div>
+<div class="place">
+Паром Эминёню → Ортакёй
+<small>Живописный маршрут по Босфору</small>
+<div class="route">⛴ Причал Eminönü</div>
+</div>
+
+</div>
+
+<div class="info-box">Optional • Ортакёй и Босфор</div> 
+
+<div class="schedule">
+
+<div class="time">14:30</div>
+<div class="place">
+Мечеть Ортакёй
+<small>Архитектура и мост</small>
+<div class="route">⛴ Причал Ortaköy</div>
+</div>
+
+<div class="time">15:30</div>
+<div class="place">
+Набережная Ортакёя
+<small>Свет, ветер и вода</small>
+<div class="route">⛴ Причал Ortaköy</div>
+</div>
+
+<div class="time">16:30</div>
+<div class="place">
+House Café Ortaköy
+<small>Кофе с видом на Босфор</small>
+<div class="route">⛴ Причал Ortaköy</div>
+</div>
+
+</div>
+</div>
+
 </body>
 </html>
